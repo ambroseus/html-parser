@@ -1,0 +1,44 @@
+{
+  "name": "wi-parser",
+  "version": "1.0.0",
+  "description": "Website Indexer Parser",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgileVisionCompany/wi-crawler/parser"
+  },
+  "private": "true",
+  "author": "Eugene Samonenko",
+  "main": "parser.js",
+  "scripts": {
+    "dev": "pm2 --name wi-parser start parser.js --watch",
+    "lint": "prettier -l ./**/*.js && eslint ./**/*.js",
+    "lint:fix": "prettier --write ./**/*.js  && eslint --fix ./**/*.js",
+    "clean": "rm -rf node_modules && rm -rf package-lock.json",
+    "update": "ncu -u -x prettier",
+    "d:build": "docker build -t av/wi-parser .",
+    "d:run": "docker run -p 8082:8082 -d --name wi-parser av/wi-parser"
+  },
+  "dependencies": {
+    "axios": "0.21.1",
+    "body-parser": "1.19.0",
+    "cheerio": "1.0.0-rc.3",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "faker": "5.1.0",
+    "morgan": "1.10.0",
+    "normalize-html-whitespace": "1.0.0",
+    "normalize-url": "5.1.0",
+    "puppeteer-core": "5.3.0",
+    "sanitize-html": "1.27.4",
+    "vm2": "3.9.2"
+  },
+  "devDependencies": {
+    "eslint": "7.9.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-config-unobtrusive": "1.2.5",
+    "eslint-plugin-more": "^1.0.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "prettier": "2.0.5"
+  }
+}

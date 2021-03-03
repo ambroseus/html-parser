@@ -12,6 +12,7 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 # Runtime data
 pids
 *.pid
+*.pem
 *.seed
 *.pid.lock
 
@@ -80,7 +81,10 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+build/
+dist/
+artifacts/
+tmp/
 
 # Gatsby files
 .cache/
@@ -102,3 +106,14 @@ dist
 
 # TernJS port file
 .tern-port
+
+.vscode/
+
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+rest-mocks
+*.http

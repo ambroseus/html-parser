@@ -1,0 +1,37 @@
+{
+  "plugins": ["prettier", "import", "more"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "unobtrusive"
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": false,
+      "generators": true,
+      "modules": true
+    }
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "more/no-void-map": 2,
+    "more/no-c-like-loops": 2,
+    "more/prefer-includes": 2,
+    "more/no-then": 2,
+    "more/no-window": 2,
+    "more/no-numeric-endings-for-variables": 2,
+    "more/no-filter-instead-of-find": 2,
+    "more/force-native-methods": 2,
+    "more/no-duplicated-chains": 2,
+    "more/classbody-starts-with-newline": [2, "never"],
+    "more/no-hardcoded-password": 2,
+    "more/no-hardcoded-configuration-data": 2
+  }
+}
